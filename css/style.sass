@@ -1,0 +1,383 @@
+$Gold:  #a9a079 
+$bgcolor: #2b2222
+// #e2b73a gold 1
+$blue: #4065cc
+$red: #cc4040
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+a
+    text-decoration: none
+    color: inherit
+
+li
+    list-style-type: none
+
+// Press Footer
+html
+    height: 100%
+body
+    font-family: 'Roboto', sans-serif
+    display: flex
+    flex-direction: column
+    height: 100%
+    background: $bgcolor
+    color: #fff
+.header
+    flex: 0 0 auto
+
+.main
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+//  === CENTER ===
+.center
+    padding: 0 calc( 50% - 500px )
+
+// === MARGIN ===
+.margin
+    margin: 40px 0
+// === HEADER ===
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: $bgcolor
+    color: #fff
+    height: 60px
+    &__logo
+        text-transform: uppercase
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.07em
+        color: $blue
+
+// === NAV ===
+
+.nav
+    &__ul
+        display: flex
+    &__link
+        position: relative
+        padding: 0 10px
+        transition: .3s linear
+        cursor: pointer
+        color: $blue
+        padding: 10px
+        font-weight: 700
+        overflow: hidden
+        &:hover
+            color: #fff
+        &:hover .nav__line
+            transition: .3s linear
+            opacity: 1
+            right: 0
+    &__line
+        position: absolute
+        content: ""
+        width: 100%
+        bottom: 0
+        right: 100%
+        height: 2px
+        background: #fff
+        opacity: 0
+
+// === INTRO ===
+.intro
+    background: #ccc url(../img/intro/bg.jpg) no-repeat center
+    background-size: cover
+    height: 500px
+    display: flex
+    flex-direction: column
+    &__content
+        margin-top: 100px
+        margin-left: 50px
+    &__title
+        color: $blue
+        font-size: 54px
+        filter: brightness(none)
+    &__text
+        margin-top: 20px
+        color: #fff
+        width: 285px
+
+// === ABOUT ===
+.about
+    display: flex
+    flex-flow: row wrap
+    background: $bgcolor
+    color: #fff
+    padding-top: 20px
+    padding-bottom: 20px
+    &__title
+        flex-basis: 100%
+        text-align: center
+        font-size: 40px
+    &__content
+        flex-basis: 50%
+        margin: 70px 0
+    &__h3
+        width: 300px
+        margin-bottom: 20px
+        font-size: 20px
+
+// === BENEFIT ===
+.benefit
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+
+    &__title
+        font-size: 40px
+        flex-basis: 100%
+        text-align: center
+        margin-bottom: 50px
+    &__item
+        position: relative
+        margin: 20px 0
+        text-align: center
+        flex-basis: 25%
+        border-radius: 25px
+        color: #fff
+        padding: 30px 10px
+        cursor: pointer
+        height: 300px
+        &__red
+            border: 1px solid $red
+            &:hover
+                box-shadow: 0 0 5px $red, 0 0 25px $red, 0 0 100px $red
+        &__blue
+            border: 1px solid $blue
+            &:hover
+                box-shadow: 0 0 5px $blue, 0 0 25px $blue, 0 0 100px $blue
+        &:hover .benefit__text
+            opacity: 1
+            bottom: 25%
+        &:hover .benefit__top
+            top: 0
+    &__top
+        position: relative
+        top: 55px
+        transition: top 0.3s linear
+    &__text
+        font-size: 13px
+        line-height: 20px
+        position: absolute
+        opacity: 0
+        bottom: 0
+        left: 0
+        padding: 0 10px
+        transition: .3s linear
+    &__h2
+        font-size: 25px
+        margin: 20px 0 10px 0
+        transition: margin 0.3s linear
+    &__icon
+        font-size: 50px
+
+// === OUR ===
+.our
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    &__title
+        text-align: center
+        flex-basis: 100%
+        font-size: 40px
+        margin-bottom: 50px
+// === CARD ===
+.card
+    position: relative
+    flex-basis: 35%
+    padding: 40px 30px
+    border: 2px solid #fff
+    background: $bgcolor
+    cursor: pointer
+    text-align: center
+    &__line
+        position: absolute
+        top: 25px
+        content: ""
+        width: 100%
+        height: 100%
+        z-index: -1
+        transition: 0.3s linear
+        &__right
+            left: 25px
+            border: 2px solid #cc4040
+        &__left
+            right: 25px
+            border: 2px solid #4065cc
+    &:hover .card__line__right
+        box-shadow: 0 0 25px #cc4040
+    &:hover .card__line__left
+        box-shadow: 0 0 25px #4065cc
+    &__content
+        &__left
+            text-align: left
+        &__right
+            text-align: right
+    &__img
+        height: 165px
+        width: 100%
+        margin: 30px 0
+    &__title
+        font-size: 28px
+        margin-bottom: 20px
+    &__text
+        font-size: 14px
+        line-height: 20px
+    &__btn
+        display: inline-block
+        text-transform: uppercase
+        font-weight: 700
+        letter-spacing: 0.05em
+
+        margin-top: 20px
+        padding: 10px 30px
+        transition: 0.3s linear
+        &__red
+            border: 1px solid #cc4040
+            &:hover
+                background: #cc4040
+
+        &__blue
+            border: 1px solid #4065cc
+            &:hover
+                background: #4065cc
+
+//  === Reviews ===
+
+.reviews
+    display: flex
+    flex-flow: column
+    align-items: center
+    margin: 70px 0
+    &__title
+        font-size: 40px
+        margin-bottom: 50px
+    &__item
+        display: flex
+        width: 70%
+    &__box
+        flex-basis: 37%
+        text-align: center
+    &__photo
+        height: 200px
+        border-radius: 50%
+    &__content
+        flex-basis: 63%
+        display: flex
+        flex-flow: column
+        justify-content: center
+    &__h3
+        text-transform: capitalize
+        margin-bottom: 10px
+        font-size: 20px
+    &__text
+        font-style: italic
+        line-height: 21px
+
+// SLICK-slider
+.slick-slider
+    width: 100%
+.slick-list
+    overflow: hidden
+.slick-track
+    display: flex
+// === REVIEWS SLIDER ===
+.reviews__slider .slick-arrow
+    display: none !important
+
+//  === PHOTO GALERY === 
+.gallery__title
+    font-size: 40px
+    text-align: center
+    margin-bottom: 40px
+.slider__item
+    margin: 0 20px
+.gallery__slider
+    margin-bottom: 50px
+.gallery__slider .slick-arrow
+    display: block
+.gallery__slider .slick-track
+    height: 300px
+
+// FORM & CONTACT
+.contact_form
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+
+.contact
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 20px 65px
+    border-radius: 20px
+    box-shadow: 0 0 25px $red
+    border: 1px solid $red
+    &__title
+        font-size: 30px
+        margin-bottom: 40px
+    &__box
+        display: flex
+        align-items: center
+        margin: 20px 0
+        font-size: 20px
+        letter-spacing: 0.05em
+    &__icon
+        margin-right: 20px
+        font-size: 30px
+        color: $red
+
+.form
+    padding: 20px 65px
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+
+    border-radius: 20px
+    box-shadow: 0 0 25px $blue
+    border: 1px solid $blue
+    &__title
+        margin: 20px 0
+    &__input
+        padding: 10px 20px
+        margin: 10px 0
+        background: transparent
+        border: 2px solid $blue
+        border-radius: 10px
+        outline: none
+        color: #fff
+        &::placeholder
+            color: #fff
+    &__btn
+        display: inline-block
+        color: #fff
+        border-radius: 10px
+        border: 2px solid $blue
+        background: transparent
+        width: 50%
+        padding: 10px 20px
+        margin: 20px 0
+        transition: .3s linear
+        cursor: pointer
+        &:hover
+            background: $blue
+
+// === FOOTER ===
+
+.footer
+    display: flex
+    justify-content: space-around
+    background: $bgcolor
+    padding: 20px
+    border-top: 1px solid #756f6f
