@@ -81,6 +81,10 @@ body {
   color: #4065cc;
 }
 
+.burger__menu {
+  display: none;
+}
+
 .nav__ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +156,14 @@ body {
   width: 285px;
 }
 
+.title {
+  font-size: 40px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,17 +178,10 @@ body {
   padding-bottom: 20px;
 }
 
-.about__title {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  text-align: center;
-  font-size: 40px;
-}
-
 .about__content {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  margin: 70px 0;
+  margin: 30px 0 50px 0;
 }
 
 .about__h3 {
@@ -196,14 +201,6 @@ body {
           flex-flow: row wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.benefit__title {
-  font-size: 40px;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .benefit__item {
@@ -286,14 +283,6 @@ body {
           flex-flow: row wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.our__title {
-  text-align: center;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  font-size: 40px;
-  margin-bottom: 50px;
 }
 
 .card {
@@ -403,11 +392,6 @@ body {
   margin: 70px 0;
 }
 
-.reviews__title {
-  font-size: 40px;
-  margin-bottom: 50px;
-}
-
 .reviews__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,11 +465,39 @@ body {
 }
 
 .gallery__slider {
-  margin-bottom: 50px;
+  margin: 50px auto;
+  width: 90%;
+  position: relative;
 }
 
 .gallery__slider .slick-arrow {
   display: block;
+  position: absolute;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  top: 43%;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -20px;
+  border: none;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.slick-next {
+  right: -20px;
+  border: none;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .gallery__slider .slick-track {
@@ -525,7 +537,6 @@ body {
 }
 
 .contact__title {
-  font-size: 30px;
   margin-bottom: 40px;
 }
 
@@ -621,5 +632,117 @@ body {
   background: #2b2222;
   padding: 20px;
   border-top: 1px solid #756f6f;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 457px) {
+  .center {
+    padding: 0 calc( 50% - 145px);
+  }
+  .margin {
+    margin: 20px 0;
+  }
+  .header {
+    position: relative;
+  }
+  .nav {
+    display: none;
+  }
+  .nav__li {
+    text-align: right;
+    display: contents;
+  }
+  .nav__ul {
+    top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    background: #ccc;
+    width: 50%;
+    left: 50%;
+  }
+  .burger__menu {
+    display: block;
+    font-size: 25px;
+  }
+  .nav__input:checked .nav {
+    display: block;
+  }
+  .intro__content {
+    margin-top: 65px;
+    margin-left: 0;
+  }
+  .title {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .about__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 25px 0;
+  }
+  .about__h3 {
+    font-size: 18px;
+  }
+  .about__text {
+    font-size: 14px;
+  }
+  .benefit__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .card {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    padding: 30px 20px;
+  }
+  .card__title {
+    font-size: 23px;
+  }
+  .card__img {
+    heigh: 150px;
+  }
+  .reviews__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .reviews__box {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .reviews__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .reviews__text {
+    font-size: 14px;
+  }
+  .gallery__slider {
+    width: 100%;
+  }
+  .gallery__slider .slick-arrow {
+    display: none !important;
+  }
+  .contact {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 30px;
+  }
+  .contact__box {
+    font-size: 15px;
+  }
+  .form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 30px;
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

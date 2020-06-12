@@ -21,12 +21,14 @@ $(document).ready(function() {
         responsive: [{
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             }, {
                 breakpoint: 500,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             },
 
