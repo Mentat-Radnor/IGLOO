@@ -18,8 +18,12 @@ html {
   height: 100%;
 }
 
+input {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,14 +109,14 @@ body {
   -webkit-transition: .3s linear;
   transition: .3s linear;
   cursor: pointer;
-  color: #4065cc;
+  color: #fff;
   padding: 10px;
   font-weight: 700;
   overflow: hidden;
 }
 
 .nav__link:hover {
-  color: #fff;
+  color: #4065cc;
 }
 
 .nav__link:hover .nav__line {
@@ -131,6 +135,7 @@ body {
   height: 2px;
   background: #fff;
   opacity: 0;
+  background: #4065cc;
 }
 
 .intro {
@@ -147,7 +152,7 @@ body {
 }
 
 .intro__content {
-  margin-top: 100px;
+  margin-top: 23px;
   margin-left: 50px;
 }
 
@@ -180,6 +185,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #2b2222;
   color: #fff;
   padding-top: 20px;
@@ -187,8 +195,8 @@ body {
 }
 
 .about__content {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   margin: 30px 0 50px 0;
 }
 
@@ -614,18 +622,22 @@ body {
 
 .form__input::-webkit-input-placeholder {
   color: #fff;
+  opacity: 0.5;
 }
 
 .form__input:-ms-input-placeholder {
   color: #fff;
+  opacity: 0.5;
 }
 
 .form__input::-ms-input-placeholder {
   color: #fff;
+  opacity: 0.5;
 }
 
 .form__input::placeholder {
   color: #fff;
+  opacity: 0.5;
 }
 
 .form__btn {
@@ -640,6 +652,7 @@ body {
   -webkit-transition: .3s linear;
   transition: .3s linear;
   cursor: pointer;
+  outline: none;
 }
 
 .form__btn:hover {
