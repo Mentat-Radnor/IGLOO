@@ -4,41 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>IGLOO</title>
     <script src="https://kit.fontawesome.com/5c438f19a3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="header center">
-        <div class="header__logo">
-            Igloo
-        </div>
-        <nav class="nav">
+    <header class="header center" id="header">
+        <a class="logo" href="index.html">
+            IGI
+        </a>
+        <nav class="nav" id="nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href="#" class="nav__link">О нас<span class="nav__line"></span></a></li>
-                <li class="nav__li"><a href="#" class="nav__link">Отзывы<span class="nav__line"></span></a></li>
-                <li class="nav__li"><a href="#" class="nav__link">Наши проекты <span class="nav__line"></span></a></li>
-                <li class="nav__li"><a href="#" class="nav__link">Контакты<span class="nav__line"></span></a></li>
+                <li class="nav__li"><a href="#" class="nav__link" data-scroll="#about">О нас<span class="nav__line"></span></a></li>
+                <li class="nav__li"><a href="#" class="nav__link" data-scroll="#reviews">Отзывы<span class="nav__line"></span></a></li>
+                <li class="nav__li"><a href="#" class="nav__link" data-scroll="#our">Наши проекты <span class="nav__line"></span></a></li>
+                <li class="nav__li"><a href="#" class="nav__link" data-scroll="#contact">Контакты<span class="nav__line"></span></a></li>
             </ul>
         </nav>
-        <input type="checkbox" id="burger" class="nav__input>
-        <label for=" burger " class="burger__menu "><i class="fas fa-bars "></i></label>
-            
-        
+        <div class="burger__menu" id="navToggle">
+            <i class="fas fa-bars "></i>
+        </div>
+
+
     </header>
     <main class="main ">
-        <section class="intro center ">
+        <section class="intro center " id="intro">
             <div class="intro__content ">
                 <h1 class="intro__title ">IGLOO</h1>
                 <div class="intro__text ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, porro?
+                    Комфортный отдых доступен каждому
                 </div>
             </div>
             <!-- !intro__content -->
         </section>
-        <section class="about center margin ">
+        <section class="about center margin " id="about">
             <h2 class="title ">
                 О нас
             </h2>
@@ -51,7 +53,7 @@
                 </p>
             </div>
             <div class="about__photo ">
-
+                <img src="img/about/1.jpg" alt="igloo" class="about__img">
             </div>
             <!-- !content -->
         </section>
@@ -63,7 +65,7 @@
                 <div class="benefit__top ">
                     <i class="benefit__icon fas fa-house-damage "></i>
                     <h2 class="benefit__h2 ">
-                        Надеждность
+                        Надежность
                     </h2>
                 </div>
                 <!-- top  -->
@@ -98,12 +100,12 @@
             <!-- !item -->
         </section>
 
-        <section class="our center margin ">
+        <section class="our center margin " id="our">
             <h2 class="title ">
                 Наши проекты
             </h2>
             <div class="card ">
-                <img class="card__logo " src="img/our/dja.png " alt="Djakuznya ">
+                <img class="card__logo " src="img/card/dja.png " alt="Djakuznya ">
                 <div class="card__content card__content__left ">
                     <img class="card__img " src="img/card/blur.jpg " alt="dja ">
                     <h3 class="card__title ">
@@ -123,7 +125,7 @@
             <!-- !CARD -->
 
             <div class="card ">
-                <img class="card__logo " src="img/our/igloo.svg " alt="IglooBar ">
+                <img class="card__logo " src="img/card/igloo.svg " alt="IglooBar ">
                 <div class="card__content card__content__right ">
                     <img class="card__img " src="img/card/ig2.jpg " alt="dja ">
                     <h3 class="card__title ">
@@ -144,7 +146,7 @@
         </section>
         <!-- OUR -->
 
-        <section class="reviews center ">
+        <section class="reviews center " id="reviews">
             <h2 class="title ">
                 Что говорят наши клиенты
             </h2>
@@ -197,16 +199,29 @@
         <section class="gallery center margin ">
             <h2 class="title ">Фотогалерея</h2>
             <div class="gallery__slider ">
-                <img src="img/Gallery/1.jpg " alt="gallery " class="slider__item ">
-                <img src="img/Gallery/2.jpg " alt="gallery " class="slider__item ">
-                <img src="img/Gallery/3.jpg " alt="gallery " class="slider__item ">
-                <img src="img/Gallery/4.jpg " alt="gallery " class="slider__item ">
-                <img src="img/Gallery/5.jpg " alt="gallery " class="slider__item ">
-                <img src="img/Gallery/6.jpg " alt="gallery " class="slider__item ">
+                <a href="img/Gallery/1.jpg " class="popup-link">
+                    <img src="img/Gallery/1.jpg " alt="gallery " id="popup" class="slider__item">
+                </a>
+                <a href="img/Gallery/2.jpg" class="popup-link">
+                    <img src="img/Gallery/2.jpg " alt="gallery " id="popup1" class="slider__item">
+                </a>
+                <a href="img/Gallery/3.jpg" class="popup-link">
+                    <img src="img/Gallery/3.jpg " alt="gallery " id="popup2" class="slider__item">
+                </a>
+                <a href="img/Gallery/4.jpg" class="popup-link">
+                    <img src="img/Gallery/4.jpg " alt="gallery " id="popup3" class="slider__item">
+                </a>
+                <a href="img/Gallery/5.jpg" class="popup-link">
+                    <img src="img/Gallery/5.jpg " alt="gallery " id="popup4" class="slider__item">
+                </a>
+                <a href="img/Gallery/6.jpg" class="popup-link">
+                    <img src="img/Gallery/6.jpg " alt="gallery " class="slider__item">
+                </a>
+
             </div>
         </section>
 
-        <div class="contact_form center margin ">
+        <div class="contact_form center margin " id="contact">
             <div class="contact ">
                 <h2 class="contact__title ">
                     Наши контакты
@@ -246,13 +261,16 @@
     </main>
     <!-- !main -->
     <footer class="footer center ">
-        <img src="# " alt="logo " class="logo ">
+        <a class="logo" href="index.html">
+            IGI
+        </a>
         <div class="copy ">
             &copy;Все права защищены 2020
         </div>
     </footer>
     <!-- SCRIPT JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/slick.min.js "></script>
     <script src="js/script.js "></script>
 </body>

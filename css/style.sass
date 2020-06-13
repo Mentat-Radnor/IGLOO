@@ -50,12 +50,18 @@ body
     background: $bgcolor
     color: #fff
     height: 60px
-    &__logo
-        text-transform: uppercase
-        font-size: 20px
-        font-weight: 700
-        letter-spacing: 0.07em
-        color: $blue
+.logo
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 0.07em
+    color: $blue
+
+.fixed
+    position: fixed !important
+    z-index: 2
+    width: 100%
+    box-shadow: 0 0 25px #7466a9
 
 .burger__menu
     display: none
@@ -91,7 +97,7 @@ body
 
 // === INTRO ===
 .intro
-    background: #ccc url(../img/intro/bg.jpg) no-repeat center
+    background: $bgcolor url(../img/intro/1.jpg) no-repeat center
     background-size: cover
     height: 500px
     display: flex
@@ -129,6 +135,10 @@ body
         width: 300px
         margin-bottom: 20px
         font-size: 20px
+    &__photo
+        flex-basis: 50%
+    &__img
+        width: 100%
 
 // === BENEFIT ===
 .benefit
@@ -290,8 +300,12 @@ body
     font-size: 40px
     text-align: center
     margin-bottom: 40px
-.slider__item
+.popup-link
+    width: 100%
     margin: 0 20px
+.slider__item
+    width: 100%
+    height: 100%
 .gallery__slider
     margin: 50px auto
     width: 90%
@@ -319,7 +333,9 @@ body
     border-right: 3px solid #fff
     transform: rotate(45deg)
 .gallery__slider .slick-track
-    height: 300px
+    height: 250px
+
+// === POP UP IMG ===
 
 // FORM & CONTACT
 .contact_form
@@ -412,13 +428,15 @@ body
             flex-direction: column
             position: absolute
             background: #ccc
-            width: 50%
-            left: 50%
+            width: 100%
+            right: 0
+            background: $bgcolor
+            padding: 0 55px
+        &__show
+            display: flex
     .burger__menu
         display: block
         font-size: 25px
-    .nav__input:checked .nav
-        display: block
     // === INTRO ===
     .intro
         &__content
@@ -436,6 +454,8 @@ body
             font-size: 18px
         &__text
             font-size: 14px
+        &__photo
+            display: none
     // BENEFIT 
     .benefit
         &__item
