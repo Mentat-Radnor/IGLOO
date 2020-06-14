@@ -43,11 +43,12 @@ $(document).ready(function() {
         // navToggle
 
         navToggle.on(`click`, function(event) {
-            nav.toggleClass(`nav__show`)
+            nav.toggleClass(`nav__show`);
+            $(`.nav__ul`).toggleClass(`center`)
         })
     });
 
-    // BURGER__menu
+    // slider reviews
 
 
 
@@ -102,7 +103,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
         responsive: [{
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -134,6 +135,10 @@ $(document).ready(function() {
             }, 1000);
         });
         return false;
+    });
+    // animation card
+    AOS.init({
+        duration: 700,
     });
 
 });

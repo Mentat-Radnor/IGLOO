@@ -105,15 +105,15 @@ body
     height: 500px
     display: flex
     flex-direction: column
+    text-align: center
     &__content
-        margin-top: 23px
-        margin-left: 50px
+        margin-top: 80px
     &__title
         color: $blue
         font-size: 54px
         filter: brightness(none)
     &__text
-        margin-top: 20px
+        margin: 20px auto
         color: #fff
         width: 285px
 
@@ -198,15 +198,22 @@ body
     display: flex
     flex-flow: row wrap
     justify-content: space-around
+    overflow: hidden
 // === CARD ===
+
 .card
-    position: relative
-    flex-basis: 35%
-    padding: 40px 30px
+    padding: 40px
     border: 2px solid #fff
     background: $bgcolor
-    cursor: pointer
     text-align: center
+    &__wrapper
+        position: relative
+        flex-basis: 35%
+        cursor: pointer
+        &:hover .card__line__left
+            box-shadow: 0 0 25px #4065cc
+        &:hover .card__line__right
+            box-shadow: 0 0 25px #cc4040
     &__line
         position: absolute
         top: 25px
@@ -221,10 +228,7 @@ body
         &__left
             right: 25px
             border: 2px solid #4065cc
-    &:hover .card__line__right
-        box-shadow: 0 0 25px #cc4040
-    &:hover .card__line__left
-        box-shadow: 0 0 25px #4065cc
+
     &__content
         &__left
             text-align: left
@@ -235,7 +239,7 @@ body
         width: 100%
         margin: 30px 0
     &__title
-        font-size: 28px
+        font-size: 26px
         margin-bottom: 20px
     &__text
         font-size: 14px
@@ -258,6 +262,12 @@ body
             border: 1px solid #4065cc
             &:hover
                 background: #4065cc
+//  CARD animate
+.hidden
+    opacity: 0
+
+.visible
+    opacity: 1
 
 //  === Reviews ===
 
@@ -295,6 +305,8 @@ body
     overflow: hidden
 .slick-track
     display: flex
+.slick-slide
+    outline: none
 // === REVIEWS SLIDER ===
 .reviews__slider .slick-arrow
     display: none !important
@@ -429,6 +441,8 @@ body
         &__li
             text-align: right
             display: contents
+        &__link
+            padding: 10px 0
         &__ul
             top: 60px
             flex-direction: column
@@ -445,9 +459,10 @@ body
         font-size: 25px
     // === INTRO ===
     .intro
+        background: #2b2222 url(../img/intro/1.jpg) no-repeat 80%
         &__content
-            margin-top: 65px
-            margin-left: 0
+            margin-top: 50px
+            text-align: left
     // ABOUT
     .title
         font-size: 35px
@@ -466,14 +481,19 @@ body
     .benefit
         &__item
             flex-basis: 100%
+    // OUR
+    .our
+        overflow: hidden
+        padding-bottom: 30px
     // CARD
     .card
-        flex-basis: 90%
         padding: 30px 20px
+        &__wrapper
+            flex-basis: 90%
         &__title
             font-size: 23px
         &__img
-            heigh: 150px
+            height: 150px
 
     // === REVIEWS ===
     .reviews
@@ -485,6 +505,8 @@ body
             flex-basis: 100%
         &__text
             font-size: 14px
+        &__h3
+            text-align: center
     // GALLERY
     .gallery__slider
         width: 100%
